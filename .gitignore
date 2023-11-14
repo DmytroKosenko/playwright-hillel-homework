@@ -5,3 +5,7 @@ mochawesome-report/
 yarn.lock
 .vscode/
 .eslintrc.js
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
