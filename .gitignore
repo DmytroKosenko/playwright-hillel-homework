@@ -1,0 +1,7 @@
+node_modules/
+mochawesome-report/
+.yarn
+.yarnrc.yml
+yarn.lock
+.vscode/
+.eslintrc.js
