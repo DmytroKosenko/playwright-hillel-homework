@@ -27,6 +27,7 @@ module.exports = defineConfig({
   reporter: "html",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    viewport: { width: 1280, height: 720 },
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
@@ -40,7 +41,6 @@ module.exports = defineConfig({
       name: "chromium",
       use: {
         ...devices["Desktop Chrome"],
-        viewport: { width: 1280, height: 720 },
       },
     },
 
@@ -48,7 +48,6 @@ module.exports = defineConfig({
       name: "firefox",
       use: {
         ...devices["Desktop Firefox"],
-        viewport: { width: 1280, height: 720 },
       },
     },
 
@@ -56,7 +55,6 @@ module.exports = defineConfig({
       name: "webkit",
       use: {
         ...devices["Desktop Safari"],
-        viewport: { width: 1280, height: 720 },
       },
     },
 
