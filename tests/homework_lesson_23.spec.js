@@ -96,5 +96,26 @@ test.describe("Homework test suite", () => {
     );
   });
 
-  test.skip("Website test 3", async ({ page }) => {});
+  test.skip("Website test 3", async ({ page }) => {
+    const pageTitle = page.locator("//h3");
+    const testingMenu = page.locator("//span[normalize-space()='Testing']");
+    const mobileTestingLink = page.locator("a[href='/mobile-testing.html']");
+    const mobileTestingPageTitle = page.locator("//h1");
+    const emailInputField = page.locator("//input[@name='email']");
+    const submitEmailButton = page.locator("//input[@name='submit']");
+    const submitedEmailPageTitle = page.locator("//h1");
+    const wrightForUsLink = page.locator("");
+
+    await expect(pageTitle).toBeVisible();
+    await testingMenu.click();
+    await expect(mobileTestingLink).toBeVisible();
+    await mobileTestingLink.click();
+    await expect(mobileTestingPageTitle).toBeVisible();
+    await expect(mobileTestingPageTitle).toContainText(
+      "Free Mobile App Testing Tutorial"
+    );
+    await emailInputField.click();
+    await emailInputField.fill("email@dmytro.com");
+  });
 });
+//You're Almost Done. Activate Your Subscription!
