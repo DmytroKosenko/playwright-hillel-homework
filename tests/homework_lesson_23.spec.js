@@ -63,7 +63,7 @@ test.describe("Homework test suite", () => {
     ).toBeVisible();
   });
 
-  test("Website test 2 (use const + xpath)", async ({ page }) => {
+  test.skip("Website test 2 (use const + xpath)", async ({ page }) => {
     const pageTitle = page.locator("//h3");
     const searchIcon = page.locator(
       "xpath=//span[@class='search-toggle-icon']//span[@class='kadence-svg-iconset']//*[name()='svg']"
@@ -96,26 +96,35 @@ test.describe("Homework test suite", () => {
     );
   });
 
-  test.skip("Website test 3", async ({ page }) => {
+  test("Website test 3", async ({ page }) => {
     const pageTitle = page.locator("//h3");
-    const testingMenu = page.locator("//span[normalize-space()='Testing']");
-    const mobileTestingLink = page.locator("a[href='/mobile-testing.html']");
+    const mobileTestingLink = page.locator(
+      "//a[contains(text(),'➤ Mobile App Testing')]"
+    );
     const mobileTestingPageTitle = page.locator("//h1");
     const emailInputField = page.locator("//input[@name='email']");
     const submitEmailButton = page.locator("//input[@name='submit']");
-    const submitedEmailPageTitle = page.locator("//h1");
-    const wrightForUsLink = page.locator("");
+    const submitedEmailPageTitle = page.locator(
+      "//h2[normalize-space()='Almost Done']"
+    );
 
     await expect(pageTitle).toBeVisible();
-    await testingMenu.click();
     await expect(mobileTestingLink).toBeVisible();
     await mobileTestingLink.click();
     await expect(mobileTestingPageTitle).toBeVisible();
     await expect(mobileTestingPageTitle).toContainText(
       "Free Mobile App Testing Tutorial"
     );
+    await page.evaluate(() => {
+      window.scrollBy(0, 2000);
+    });
+    const mouse = page.mouse;
+    await mouse.move(100, 200);
+
     await emailInputField.click();
-    await emailInputField.fill("email@dmytro.com");
+    await emailInputField.fill("email30@dmytro.com");
+    await expect(submitEmailButton).toBeVisible();
+    await submitEmailButton.click();
+    await expect(submitedEmailPageTitle).toBeVisible();
   });
 });
-//You're Almost Done. Activate Your Subscription!
