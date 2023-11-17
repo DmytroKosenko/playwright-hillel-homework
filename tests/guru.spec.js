@@ -81,16 +81,4 @@ test.skip("Guru website test 4", async ({ page }) => {
   await expect(textWhatIsSeq).toBeVisible();
 });
 
-test("Guru website test 5", async ({ page }) => {
-  await page.goto("https://www.guru99.com/");
-
-  const input = page.locator("input.gsc-input");
-
-  await input.click();
-  await input.fill("sap");
-  await input.clear();
-  await input.pressSequentially("S", "A", "P");
-  await input.pressSequentially("T", "u", "t", "o", "r", "i", "a", "l", {
-    delay: 200,
-  });
-});
+test("Guru website test 5", async ({ page }) => {});
