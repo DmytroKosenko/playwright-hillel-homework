@@ -4,12 +4,14 @@
 
 const { test, expect } = require("@playwright/test");
 
+test.describe.configure({ mode: "serial" });
+
 test.describe("Homework test suite", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("https://www.guru99.com/");
   });
 
-  test.skip("Website test 1 (use codegen)", async ({ page }) => {
+  test("Website test 1 (use codegen)", async ({ page }) => {
     await expect(
       page.getByRole("heading", {
         name: "Guru99 is totally new kind of learning experience.",
@@ -63,7 +65,7 @@ test.describe("Homework test suite", () => {
     ).toBeVisible();
   });
 
-  test.skip("Website test 2 (use const + xpath)", async ({ page }) => {
+  test("Website test 2 (use const + xpath)", async ({ page }) => {
     const pageTitle = page.locator("//h3");
     const searchIcon = page.locator(
       "xpath=//span[@class='search-toggle-icon']//span[@class='kadence-svg-iconset']//*[name()='svg']"
@@ -96,7 +98,7 @@ test.describe("Homework test suite", () => {
     );
   });
 
-  test("Website test 3", async ({ page }) => {
+  test("Website test 3 (Just a test with sending email)", async ({ page }) => {
     const pageTitle = page.locator("//h3");
     const mobileTestingLink = page.locator(
       "//a[contains(text(),'➤ Mobile App Testing')]"
