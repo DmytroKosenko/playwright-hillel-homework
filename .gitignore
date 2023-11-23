@@ -9,3 +9,5 @@ yarn.lock
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/screenshots
+/tests/guru.spec.js-snapshots

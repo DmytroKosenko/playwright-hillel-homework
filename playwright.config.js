@@ -1,5 +1,9 @@
+import path from "path";
+
 // @ts-check
 const { defineConfig, devices } = require("@playwright/test");
+
+export const STORAGE_STATE = path.join(__dirname, "data/auth/user.json");
 
 /**
  * Read environment variables from file.
@@ -17,19 +21,35 @@ module.exports = defineConfig({
 
   /* Run tests in files in parallel */
   fullyParallel: true,
+
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
+
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
+
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
+
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: "html",
+  reporter: [["html"], ["list"], ["json", { outputFile: "result-21-11.json" }]],
+
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     viewport: { width: 1280, height: 720 },
+
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
+    // baseURL: "https://www.guru99.com",
+    // baseURL: process.env.ENV_URL,
+    // baseURL:
+    //   process.env.ENV_URL === "2"
+    //     ? "https://www.test.guru99.com"
+    //     : "https://www.guru99.com",
+
+    locale: "de-DE",
+    timezoneId: "Europe/Berlin",
+    permissions: ["geolocation"],
+    geolocation: { latitude: 52.520008, longitude: 13.404954 },
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
@@ -38,9 +58,15 @@ module.exports = defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
+      name: "log_in",
+      testMatch: "login.setup.js",
+    },
+    {
       name: "chromium",
+      dependencies: ["log_in"],
       use: {
         ...devices["Desktop Chrome"],
+        storageState: STORAGE_STATE,
       },
     },
 

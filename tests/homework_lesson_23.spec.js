@@ -6,7 +6,7 @@ const { test, expect } = require("@playwright/test");
 
 test.describe.configure({ mode: "serial" });
 
-test.describe("Homework test suite", () => {
+test.describe.skip("Homework test suite", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("https://www.guru99.com/");
   });

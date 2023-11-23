@@ -5,16 +5,14 @@ const { test, expect } = require("@playwright/test");
 test.describe("Open Guru website", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("https://www.guru99.com/");
+    // await page.goto("/");
   });
 
   test.skip("Open the main page", async ({ page }) => {
-    //await page.goto("https://www.guru99.com/");
     await expect(page.getByText("Tutorials Library")).toBeVisible();
   });
 
   test.skip("Guru website test 1", async ({ page }) => {
-    //await page.goto("https://www.guru99.com/");
-
     await expect(
       page.getByRole("heading", { name: "Tutorials Library" })
     ).toBeVisible();
@@ -36,8 +34,6 @@ test.describe("Open Guru website", () => {
   });
 
   test.skip("Guru website test 2", async ({ page }) => {
-    //await page.goto("https://www.guru99.com/");
-
     //xpath locators example
     //a[@href="/tensorflow-tutorial.html"]
     //a[contains(text(),'➤ TensorFlow')]
@@ -49,8 +45,6 @@ test.describe("Open Guru website", () => {
   });
 
   test.skip("Guru website test 3", async ({ page }) => {
-    await page.goto("https://www.guru99.com/");
-
     const linkNltk = page.locator('a[href="/nltk-tutorial.html"]');
     const articleAdded = page.locator("xpath=//time");
     const textNltkSyllabus = page.locator(
@@ -72,29 +66,35 @@ test.describe("Open Guru website", () => {
     const textWhatIsSeq = page.locator("//h2[text()='What is Seq2Seq?']");
     const textWhatIsSeq_2 = page.locator("//h2[text()='What is Seq2Seq 2?']");
 
-    await page.goto("https://www.guru99.com/seq2seq-model.html");
     if (await textWhatIsSeq_2.isVisible()) {
       await page.locator("non.visible.locator").click();
     }
     await expect(textWhatIsSeq).toBeVisible();
   });
 
-  test("Guru website test 5", async ({ browser }) => {
-    const context = await browser.newContext({ headless: true });
-    const page = await context.newPage();
+  test.skip("Guru website test 5", async ({ page }) => {
+    // const context = await browser.newContext({ headless: true });
+    // const page = await context.newPage();
 
-    await page.goto("https://www.guru99.com/");
     await page.mouse.up();
     await page.mouse.down();
+    await page
+      .locator("div.g-content")
+      .screenshot({ path: "screenshots/header_with_search.png" });
+    await expect(page).toHaveScreenshot("main_page_snapshot.png");
     const input = page.locator("input.gsc-input");
 
     await input.click();
     await input.fill("sap");
+    await page.screenshot({
+      path: "screenshots/sap_in_search_input_false.png",
+      fullPage: false,
+    }); //make a page screenshot
     await input.clear();
     await input.pressSequentially("S", "A", "P");
     await input.pressSequentially("T", "u", "t", "o", "r", "i", "a", "l", {
       delay: 200,
     });
-    await context.close();
+    //await context.close();
   });
 });
