@@ -45,26 +45,30 @@ test.describe("Open Guru website", () => {
   });
 
   test("Guru website test 3", async ({ page }) => {
-    const linkNltk = page.locator('a[href="/nltk-tutorial.html"]');
+    const linkNltk = page.locator("//a[contains(text(),'➤ NLTK')]");
     const articleAdded = page.locator("xpath=//time");
-    const textNltkSyllabus = page.locator(
-      "xpath=//h2[text()='NLTK Tutorial Syllabus']"
+    const tutorialLink = page.locator(
+      "//a[@title='How to Download & Install NLTK on Windows/Mac']//strong[contains(text(),'Tutorial')]"
     );
-    const tutorialLink = page.locator("tr td a");
-    const textWhatIsSeq = page.locator("//h2[text()='What is Seq2Seq?']");
+    const textHowToDownload = page.locator(
+      "//h1[normalize-space()='How to Download & Install NLTK on Windows/Mac']"
+    );
 
     await linkNltk.click();
     await expect(articleAdded).toContainText("September 30, 2023");
-    await textNltkSyllabus.press("Enter");
-    await tutorialLink.nth(7).click();
-    textWhatIsSeq.waitFor({ state: "visible", timeout: 5000 }); //add an additinal timeout to wait element
-    await expect(textWhatIsSeq).toBeVisible();
+    await tutorialLink.click();
+    textHowToDownload.waitFor({ state: "visible", timeout: 5000 }); //add an additinal timeout to wait element
+    await expect(textHowToDownload).toBeVisible();
     //await expect(textWhatIsSeq).toBeVisible();
   });
 
   test("Guru website test 4", async ({ page }) => {
-    const textWhatIsSeq = page.locator("//h2[text()='What is Seq2Seq?']");
-    const textWhatIsSeq_2 = page.locator("//h2[text()='What is Seq2Seq 2?']");
+    const textWhatIsSeq = page.locator(
+      "//h4[normalize-space()='Search for your Favorite Course']"
+    );
+    const textWhatIsSeq_2 = page.locator(
+      "//h4[normalize-space()='Search for your Favorite Course 2']"
+    );
 
     if (await textWhatIsSeq_2.isVisible()) {
       await page.locator("non.visible.locator").click();
