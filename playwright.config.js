@@ -46,10 +46,10 @@ module.exports = defineConfig({
     //     ? "https://www.test.guru99.com"
     //     : "https://www.guru99.com",
 
-    locale: "de-DE",
-    timezoneId: "Europe/Berlin",
+    locale: "en-GB",
+    timezoneId: "Europe/London",
     permissions: ["geolocation"],
-    geolocation: { latitude: 52.520008, longitude: 13.404954 },
+    geolocation: { latitude: 51.509865, longitude: -0.118092 },
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",

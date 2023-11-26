@@ -139,7 +139,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-11-26T12:27:44.659Z",
+                  "startTime": "2023-11-26T12:56:05.441Z",
                   "attachments": []
                 }
               ],
@@ -175,7 +175,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-11-26T12:27:44.660Z",
+                  "startTime": "2023-11-26T12:56:05.442Z",
                   "attachments": []
                 }
               ],
@@ -190,21 +190,21 @@
       ]
     },
     {
-      "title": "guru.spec.js",
-      "file": "guru.spec.js",
+      "title": "google.spec.js",
+      "file": "google.spec.js",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Open Guru website",
-          "file": "guru.spec.js",
+          "title": "Set up geolocation of London",
+          "file": "google.spec.js",
           "line": 5,
           "column": 6,
           "specs": [
             {
-              "title": "Open the main page",
-              "ok": true,
+              "title": "Check the state after open the page",
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -216,17 +216,94 @@
                   "results": [
                     {
                       "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 1313,
+                      "status": "failed",
+                      "duration": 6252,
+                      "error": {
+                        "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('xpath=//span[@class=\\'BBwThe\\']')\nExpected string: \u001b[32m\"\u001b[7mLondon\u001b[27m city, \u001b[7mLondon\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"\u001b[7mKyiv\u001b[27m city, \u001b[7mKyiv\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('xpath=//span[@class=\\'BBwThe\\']')\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"BBwThe\">Kyiv city, Kyiv</span>\u001b[22m\n\u001b[2m  -   unexpected value \"Kyiv city, Kyiv\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"BBwThe\">Kyiv city, Kyiv</span>\u001b[22m\n\u001b[2m  -   unexpected value \"Kyiv city, Kyiv\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"BBwThe\">Kyiv city, Kyiv</span>\u001b[22m\n\u001b[2m  -   unexpected value \"Kyiv city, Kyiv\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"BBwThe\">Kyiv city, Kyiv</span>\u001b[22m\n\u001b[2m  -   unexpected value \"Kyiv city, Kyiv\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"BBwThe\">Kyiv city, Kyiv</span>\u001b[22m\n\u001b[2m  -   unexpected value \"Kyiv city, Kyiv\"\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('xpath=//span[@class=\\'BBwThe\\']')\nExpected string: \u001b[32m\"\u001b[7mLondon\u001b[27m city, \u001b[7mLondon\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"\u001b[7mKyiv\u001b[27m city, \u001b[7mKyiv\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('xpath=//span[@class=\\'BBwThe\\']')\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"BBwThe\">Kyiv city, Kyiv</span>\u001b[22m\n\u001b[2m  -   unexpected value \"Kyiv city, Kyiv\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"BBwThe\">Kyiv city, Kyiv</span>\u001b[22m\n\u001b[2m  -   unexpected value \"Kyiv city, Kyiv\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"BBwThe\">Kyiv city, Kyiv</span>\u001b[22m\n\u001b[2m  -   unexpected value \"Kyiv city, Kyiv\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"BBwThe\">Kyiv city, Kyiv</span>\u001b[22m\n\u001b[2m  -   unexpected value \"Kyiv city, Kyiv\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"BBwThe\">Kyiv city, Kyiv</span>\u001b[22m\n\u001b[2m  -   unexpected value \"Kyiv city, Kyiv\"\u001b[22m\n\n    at C:\\Users\\Dmytro Kosenko\\OneDrive\\Рабочий стол\\QA Automation JS Course\\0. Course\\homework_2\\tests\\google.spec.js:23:23",
+                        "location": {
+                          "file": "C:\\Users\\Dmytro Kosenko\\OneDrive\\Рабочий стол\\QA Automation JS Course\\0. Course\\homework_2\\tests\\google.spec.js",
+                          "column": 23,
+                          "line": 23
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m searchField\u001b[33m.\u001b[39mfill(\u001b[32m\"Fashion stores\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m searchField\u001b[33m.\u001b[39mpress(\u001b[32m\"Enter\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect(res)\u001b[33m.\u001b[39mtoContainText(\u001b[32m\"London city, London\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 25 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Dmytro Kosenko\\OneDrive\\Рабочий стол\\QA Automation JS Course\\0. Course\\homework_2\\tests\\google.spec.js",
+                            "column": 23,
+                            "line": 23
+                          },
+                          "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('xpath=//span[@class=\\'BBwThe\\']')\nExpected string: \u001b[32m\"\u001b[7mLondon\u001b[27m city, \u001b[7mLondon\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"\u001b[7mKyiv\u001b[27m city, \u001b[7mKyiv\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('xpath=//span[@class=\\'BBwThe\\']')\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"BBwThe\">Kyiv city, Kyiv</span>\u001b[22m\n\u001b[2m  -   unexpected value \"Kyiv city, Kyiv\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"BBwThe\">Kyiv city, Kyiv</span>\u001b[22m\n\u001b[2m  -   unexpected value \"Kyiv city, Kyiv\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"BBwThe\">Kyiv city, Kyiv</span>\u001b[22m\n\u001b[2m  -   unexpected value \"Kyiv city, Kyiv\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"BBwThe\">Kyiv city, Kyiv</span>\u001b[22m\n\u001b[2m  -   unexpected value \"Kyiv city, Kyiv\"\u001b[22m\n\u001b[2m  -   locator resolved to <span class=\"BBwThe\">Kyiv city, Kyiv</span>\u001b[22m\n\u001b[2m  -   unexpected value \"Kyiv city, Kyiv\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m searchField\u001b[33m.\u001b[39mfill(\u001b[32m\"Fashion stores\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m searchField\u001b[33m.\u001b[39mpress(\u001b[32m\"Enter\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect(res)\u001b[33m.\u001b[39mtoContainText(\u001b[32m\"London city, London\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 25 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\Dmytro Kosenko\\OneDrive\\Рабочий стол\\QA Automation JS Course\\0. Course\\homework_2\\tests\\google.spec.js:23:23\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-11-26T12:56:05.866Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Dmytro Kosenko\\OneDrive\\Рабочий стол\\QA Automation JS Course\\0. Course\\homework_2\\tests\\google.spec.js",
+                        "column": 23,
+                        "line": 23
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "1c0dbff95e63c5913ac5-75c93b1482e964cc64ef",
+              "file": "google.spec.js",
+              "line": 6,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "guru.spec.js",
+      "file": "guru.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Open Guru website",
+          "file": "guru.spec.js",
+          "line": 5,
+          "column": 15,
+          "specs": [
+            {
+              "title": "Open the main page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 15000,
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T12:27:45.153Z",
+                      "startTime": "2023-11-26T12:56:05.443Z",
                       "attachments": []
                     }
                   ],
-                  "status": "expected"
+                  "status": "skipped"
                 }
               ],
               "id": "5810d20d682f836f02dc-385397100039b6ce8a26",
@@ -241,24 +318,28 @@
               "tests": [
                 {
                   "timeout": 15000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "status": "passed",
-                      "duration": 3113,
+                      "workerIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T12:27:45.178Z",
+                      "startTime": "2023-11-26T12:56:05.444Z",
                       "attachments": []
                     }
                   ],
-                  "status": "expected"
+                  "status": "skipped"
                 }
               ],
               "id": "5810d20d682f836f02dc-0162d6cdc67b2e06437d",
@@ -273,24 +354,28 @@
               "tests": [
                 {
                   "timeout": 15000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 1985,
+                      "workerIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T12:27:45.178Z",
+                      "startTime": "2023-11-26T12:56:05.444Z",
                       "attachments": []
                     }
                   ],
-                  "status": "expected"
+                  "status": "skipped"
                 }
               ],
               "id": "5810d20d682f836f02dc-10ca278fa560fd42170b",
@@ -305,24 +390,28 @@
               "tests": [
                 {
                   "timeout": 15000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 2689,
+                      "workerIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T12:27:45.221Z",
+                      "startTime": "2023-11-26T12:56:05.445Z",
                       "attachments": []
                     }
                   ],
-                  "status": "expected"
+                  "status": "skipped"
                 }
               ],
               "id": "5810d20d682f836f02dc-e9b90260203ba40823d6",
@@ -337,24 +426,28 @@
               "tests": [
                 {
                   "timeout": 15000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "status": "passed",
-                      "duration": 1412,
+                      "workerIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T12:27:45.224Z",
+                      "startTime": "2023-11-26T12:56:05.446Z",
                       "attachments": []
                     }
                   ],
-                  "status": "expected"
+                  "status": "skipped"
                 }
               ],
               "id": "5810d20d682f836f02dc-ccb9bcba41a53e79b749",
@@ -369,24 +462,28 @@
               "tests": [
                 {
                   "timeout": 15000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "status": "passed",
-                      "duration": 2578,
+                      "workerIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T12:27:45.249Z",
+                      "startTime": "2023-11-26T12:56:05.446Z",
                       "attachments": []
                     }
                   ],
-                  "status": "expected"
+                  "status": "skipped"
                 }
               ],
               "id": "5810d20d682f836f02dc-5a4f5a15024bd5033822",
@@ -435,7 +532,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T12:27:44.662Z",
+                      "startTime": "2023-11-26T12:56:05.447Z",
                       "attachments": []
                     }
                   ],
@@ -471,7 +568,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T12:27:44.663Z",
+                      "startTime": "2023-11-26T12:56:05.447Z",
                       "attachments": []
                     }
                   ],
@@ -507,7 +604,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T12:27:44.663Z",
+                      "startTime": "2023-11-26T12:56:05.448Z",
                       "attachments": []
                     }
                   ],
@@ -560,7 +657,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T12:27:44.664Z",
+                      "startTime": "2023-11-26T12:56:05.448Z",
                       "attachments": []
                     }
                   ],
@@ -596,7 +693,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T12:27:44.665Z",
+                      "startTime": "2023-11-26T12:56:05.448Z",
                       "attachments": []
                     }
                   ],
@@ -615,7 +712,7 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-11-26T12:27:44.553Z",
-    "duration": 4914.892
+    "startTime": "2023-11-26T12:56:05.350Z",
+    "duration": 7335.3
   }
 }
