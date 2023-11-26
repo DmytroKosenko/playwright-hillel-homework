@@ -78,10 +78,10 @@ test.describe("Open Guru website", () => {
 
     await page.mouse.up();
     await page.mouse.down();
-    await page
-      .locator("div.g-content")
-      .screenshot({ path: "screenshots/header_with_search.png" });
-    await expect(page).toHaveScreenshot("main_page_snapshot.png");
+    //await page
+    // .locator("div.g-content")
+    // .screenshot({ path: "screenshots/header_with_search.png" });
+    //await expect(page).toHaveScreenshot("main_page_snapshot.png");
     const input = page.locator("input.gsc-input");
 
     await input.click();

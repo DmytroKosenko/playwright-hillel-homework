@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v3
 
       - name: Install dependencies
-        run: npm i
+        run: npm ci
 
       - name: Install Playwright browser
         run: npx playwright install --with-deps
