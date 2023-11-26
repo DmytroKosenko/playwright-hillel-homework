@@ -8,11 +8,11 @@ test.describe("Open Guru website", () => {
     // await page.goto("/");
   });
 
-  test.skip("Open the main page", async ({ page }) => {
+  test("Open the main page", async ({ page }) => {
     await expect(page.getByText("Tutorials Library")).toBeVisible();
   });
 
-  test.skip("Guru website test 1", async ({ page }) => {
+  test("Guru website test 1", async ({ page }) => {
     await expect(
       page.getByRole("heading", { name: "Tutorials Library" })
     ).toBeVisible();
@@ -33,7 +33,7 @@ test.describe("Open Guru website", () => {
       .click();
   });
 
-  test.skip("Guru website test 2", async ({ page }) => {
+  test("Guru website test 2", async ({ page }) => {
     //xpath locators example
     //a[@href="/tensorflow-tutorial.html"]
     //a[contains(text(),'➤ TensorFlow')]
@@ -44,7 +44,7 @@ test.describe("Open Guru website", () => {
     ).toBeVisible();
   });
 
-  test.skip("Guru website test 3", async ({ page }) => {
+  test("Guru website test 3", async ({ page }) => {
     const linkNltk = page.locator('a[href="/nltk-tutorial.html"]');
     const articleAdded = page.locator("xpath=//time");
     const textNltkSyllabus = page.locator(
@@ -62,7 +62,7 @@ test.describe("Open Guru website", () => {
     //await expect(textWhatIsSeq).toBeVisible();
   });
 
-  test.skip("Guru website test 4", async ({ page }) => {
+  test("Guru website test 4", async ({ page }) => {
     const textWhatIsSeq = page.locator("//h2[text()='What is Seq2Seq?']");
     const textWhatIsSeq_2 = page.locator("//h2[text()='What is Seq2Seq 2?']");
 
@@ -78,10 +78,10 @@ test.describe("Open Guru website", () => {
 
     await page.mouse.up();
     await page.mouse.down();
-    //await page
-    // .locator("div.g-content")
-    // .screenshot({ path: "screenshots/header_with_search.png" });
-    //await expect(page).toHaveScreenshot("main_page_snapshot.png");
+    await page
+      .locator("div.g-content")
+      .screenshot({ path: "screenshots/header_with_search.png" });
+    await expect(page).toHaveScreenshot("main_page_snapshot.png");
     const input = page.locator("input.gsc-input");
 
     await input.click();
