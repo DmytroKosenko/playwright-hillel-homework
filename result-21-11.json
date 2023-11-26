@@ -139,7 +139,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-11-26T10:34:58.673Z",
+                  "startTime": "2023-11-26T11:40:25.541Z",
                   "attachments": []
                 }
               ],
@@ -175,7 +175,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-11-26T10:34:58.675Z",
+                  "startTime": "2023-11-26T11:40:25.543Z",
                   "attachments": []
                 }
               ],
@@ -226,7 +226,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T10:34:58.675Z",
+                      "startTime": "2023-11-26T11:40:25.543Z",
                       "attachments": []
                     }
                   ],
@@ -262,7 +262,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T10:34:58.676Z",
+                      "startTime": "2023-11-26T11:40:25.544Z",
                       "attachments": []
                     }
                   ],
@@ -298,7 +298,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T10:34:58.676Z",
+                      "startTime": "2023-11-26T11:40:25.545Z",
                       "attachments": []
                     }
                   ],
@@ -334,7 +334,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T10:34:58.677Z",
+                      "startTime": "2023-11-26T11:40:25.545Z",
                       "attachments": []
                     }
                   ],
@@ -370,7 +370,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T10:34:58.677Z",
+                      "startTime": "2023-11-26T11:40:25.546Z",
                       "attachments": []
                     }
                   ],
@@ -389,34 +389,30 @@
               "tests": [
                 {
                   "timeout": 15000,
-                  "annotations": [
-                    {
-                      "type": "skip"
-                    }
-                  ],
-                  "expectedStatus": "skipped",
+                  "annotations": [],
+                  "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 1656,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T10:34:58.678Z",
+                      "startTime": "2023-11-26T11:40:25.963Z",
                       "attachments": []
                     }
                   ],
-                  "status": "skipped"
+                  "status": "expected"
                 }
               ],
               "id": "5810d20d682f836f02dc-5a4f5a15024bd5033822",
               "file": "guru.spec.js",
               "line": 75,
-              "column": 8
+              "column": 3
             }
           ]
         }
@@ -459,7 +455,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T10:34:58.679Z",
+                      "startTime": "2023-11-26T11:40:25.547Z",
                       "attachments": []
                     }
                   ],
@@ -495,7 +491,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T10:34:58.679Z",
+                      "startTime": "2023-11-26T11:40:25.548Z",
                       "attachments": []
                     }
                   ],
@@ -531,7 +527,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T10:34:58.680Z",
+                      "startTime": "2023-11-26T11:40:25.548Z",
                       "attachments": []
                     }
                   ],
@@ -555,56 +551,81 @@
       "specs": [],
       "suites": [
         {
-          "title": "Open website",
+          "title": "Verofication steps for newborn website",
           "file": "newborn.spec.js",
-          "line": 5,
-          "column": 6,
+          "line": 6,
+          "column": 15,
           "specs": [
             {
               "title": "Check the state after open the page",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
                   "timeout": 15000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "status": "timedOut",
-                      "duration": 15010,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 15000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 15000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "C:\\Users\\Dmytro Kosenko\\OneDrive\\Рабочий стол\\QA Automation JS Course\\0. Course\\homework_2\\tests\\newborn.spec.js",
-                            "column": 16,
-                            "line": 7
-                          },
-                          "message": "Error: page.goto: Page closed\n=========================== logs ===========================\nnavigating to \"http://5.189.186.217/\", waiting until \"load\"\n============================================================\n\n\u001b[0m \u001b[90m  5 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m\"Open website\"\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m  6 |\u001b[39m   test(\u001b[32m\"Check the state after open the page\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"http://5.189.186.217\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  8 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"span.card-title\"\u001b[39m)\u001b[33m.\u001b[39mnth(\u001b[35m0\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  9 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\Dmytro Kosenko\\OneDrive\\Рабочий стол\\QA Automation JS Course\\0. Course\\homework_2\\tests\\newborn.spec.js:7:16\u001b[22m"
-                        }
-                      ],
+                      "workerIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-26T10:34:59.109Z",
+                      "startTime": "2023-11-26T11:40:25.549Z",
                       "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "skipped"
                 }
               ],
-              "id": "f48e2b1e9d9dac4d05f8-5ddb664cc18c6c7fc109",
+              "id": "f48e2b1e9d9dac4d05f8-6cf72aedcc140e25dea0",
               "file": "newborn.spec.js",
-              "line": 6,
+              "line": 11,
+              "column": 3
+            },
+            {
+              "title": "Usage POM",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 15000,
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-11-26T11:40:25.549Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f48e2b1e9d9dac4d05f8-7d6a1cf9fd902483233e",
+              "file": "newborn.spec.js",
+              "line": 15,
               "column": 3
             }
           ]
@@ -614,7 +635,7 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-11-26T10:34:58.642Z",
-    "duration": 15995.515
+    "startTime": "2023-11-26T11:40:25.506Z",
+    "duration": 2626.093
   }
 }

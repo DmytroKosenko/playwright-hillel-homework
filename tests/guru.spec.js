@@ -72,7 +72,7 @@ test.describe("Open Guru website", () => {
     await expect(textWhatIsSeq).toBeVisible();
   });
 
-  test.skip("Guru website test 5", async ({ page }) => {
+  test("Guru website test 5", async ({ page }) => {
     // const context = await browser.newContext({ headless: true });
     // const page = await context.newPage();
 

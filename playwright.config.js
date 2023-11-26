@@ -39,8 +39,8 @@ module.exports = defineConfig({
     viewport: { width: 1280, height: 720 },
 
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: "https://www.guru99.com",
     // baseURL: process.env.ENV_URL,
+    // baseURL: "https://www.guru99.com",
     // baseURL:
     //   process.env.ENV_URL === "2"
     //     ? "https://www.test.guru99.com"
