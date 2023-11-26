@@ -59,14 +59,18 @@ module.exports = defineConfig({
   projects: [
     {
       name: "log_in",
-      testMatch: "login.setup.js",
+      testMatch: "**/*.setup.js",
+    },
+    {
+      name: "logged in",
+      testMatch: "newborn.spec.js",
+      dependencies: ["log_in"],
+      use: { storageState: STORAGE_STATE },
     },
     {
       name: "chromium",
-      dependencies: ["log_in"],
       use: {
         ...devices["Desktop Chrome"],
-        storageState: STORAGE_STATE,
       },
     },
 
