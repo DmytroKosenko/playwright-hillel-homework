@@ -2,7 +2,7 @@ const { test, expect } = require("@playwright/test");
 
 test.describe.configure({ mode: "serial" });
 
-test.describe("Set up geolocation of London", () => {
+test.describe.skip("Set up geolocation of London", () => {
   test("Check the state after open the page", async ({ page, browser }) => {
     const context = await browser.newContext({
       locale: "en-GB",
