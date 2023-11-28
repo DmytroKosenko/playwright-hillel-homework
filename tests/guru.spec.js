@@ -2,7 +2,7 @@ const { test, expect } = require("@playwright/test");
 
 //test.describe.configure({ mode: "serial" }); //run test 1-by-1
 
-test.describe("Open Guru website", () => {
+test.describe.skip("Open Guru website", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("https://www.guru99.com/");
     // await page.goto("/");

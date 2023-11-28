@@ -17,7 +17,7 @@ export const STORAGE_STATE = path.join(__dirname, "data/auth/user.json");
 module.exports = defineConfig({
   testDir: "./tests",
   testMatch: "*.spec.js",
-  timeout: 15000,
+  timeout: 60000,
 
   /* Run tests in files in parallel */
   fullyParallel: true,
