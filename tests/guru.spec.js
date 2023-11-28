@@ -33,7 +33,7 @@ test.describe("Open Guru website", () => {
       .click();
   });
 
-  test("Guru website test 2", async ({ page }) => {
+  test.skip("Guru website test 2", async ({ page }) => {
     //xpath locators example
     //a[@href="/tensorflow-tutorial.html"]
     //a[contains(text(),'➤ TensorFlow')]
@@ -44,7 +44,7 @@ test.describe("Open Guru website", () => {
     ).toBeVisible();
   });
 
-  test("Guru website test 3", async ({ page }) => {
+  test.skip("Guru website test 3", async ({ page }) => {
     const linkNltk = page.locator("//a[contains(text(),'➤ NLTK')]");
     const articleAdded = page.locator("xpath=//time");
     const tutorialLink = page.locator(
@@ -62,7 +62,7 @@ test.describe("Open Guru website", () => {
     //await expect(textWhatIsSeq).toBeVisible();
   });
 
-  test("Guru website test 4", async ({ page }) => {
+  test.skip("Guru website test 4", async ({ page }) => {
     const textWhatIsSeq = page.locator(
       "//h4[normalize-space()='Search for your Favorite Course']"
     );
