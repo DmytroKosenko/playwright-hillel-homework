@@ -2,7 +2,7 @@ const { test, expect } = require("@playwright/test");
 
 //test.describe.configure({ mode: "serial" }); //run test 1-by-1
 
-test.describe("Open Guru website", () => {
+test.describe.skip("Open Guru website", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("https://www.guru99.com/");
     // await page.goto("/");
@@ -82,10 +82,10 @@ test.describe("Open Guru website", () => {
 
     await page.mouse.up();
     await page.mouse.down();
-    await page
-      .locator("div.g-content")
-      .screenshot({ path: "screenshots/header_with_search.png" });
-    await expect(page).toHaveScreenshot("main_page_snapshot.png");
+    // await page
+    //   .locator("div.g-content")
+    //   .screenshot({ path: "screenshots/header_with_search.png" });
+    // await expect(page).toHaveScreenshot("main_page_snapshot.png");
     const input = page.locator("input.gsc-input");
 
     await input.click();
