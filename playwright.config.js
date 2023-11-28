@@ -32,7 +32,7 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [["html"], ["list"], ["json", { outputFile: "result-21-11.json" }]],
+  reporter: [["html"], ["list"]], // ["json", { outputFile: "result-21-11.json" }]
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -46,10 +46,10 @@ module.exports = defineConfig({
     //     ? "https://www.test.guru99.com"
     //     : "https://www.guru99.com",
 
-    locale: "de-DE",
-    timezoneId: "Europe/Berlin",
-    permissions: ["geolocation"],
-    geolocation: { latitude: 52.520008, longitude: 13.404954 },
+    // locale: "en-GB",
+    // timezoneId: "Europe/London",
+    // permissions: ["geolocation"],
+    // geolocation: { latitude: 51.509865, longitude: -0.118092 },
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
