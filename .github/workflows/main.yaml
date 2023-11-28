@@ -19,6 +19,6 @@ jobs:
         run: npx playwright install chromium --with-deps
 
       - name: Run Playwright tests
-        run: npx playwright test --project chromium --update-snapshot
+        run: npx playwright test --project chromium --update-snapshots
         env:
           CI: "true"
