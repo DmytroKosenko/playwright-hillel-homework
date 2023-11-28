@@ -1,24 +1,24 @@
-# name: e2e tests on Playwright
+name: e2e tests on Playwright
 
-# on:
-#   push:
-#     branches: [main, master]
+on:
+  push:
+    branches: [main, master]
 
-# jobs:
-#   tests:
-#     runs-on: ubuntu-latest
+jobs:
+  tests:
+    runs-on: ubuntu-latest
 
-#     steps:
-#       - uses: actions/checkout@v3
-#       - uses: actions/setup-node@v3
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
 
-#       - name: Install dependencies
-#         run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-#       - name: Install Playwright browser
-#         run: npx playwright install --with-deps
+      - name: Install Playwright browser
+        run: npx playwright install chromium --with-deps
 
-#       - name: Run Playwright tests
-#         run: npx playwright test --project chromium
-#         env:
-#           CI: "true"
+      - name: Run Playwright tests
+        run: npx playwright test --project chromium --update-snapshot
+        env:
+          CI: "true"
