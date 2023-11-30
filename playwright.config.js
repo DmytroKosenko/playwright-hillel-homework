@@ -1,3 +1,4 @@
+import { configDotenv } from "dotenv";
 import path from "path";
 
 // @ts-check
@@ -10,6 +11,10 @@ export const STORAGE_STATE = path.join(__dirname, "data/auth/user.json");
  * https://github.com/motdotla/dotenv
  */
 // require('dotenv').config();
+
+// configDotenv({
+//   path: `.env/.env.${process.env.ENV}`,
+// });
 
 /**
  * @see https://playwright.dev/docs/test-configuration
