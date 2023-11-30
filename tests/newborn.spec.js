@@ -4,11 +4,31 @@ const { MainPageNewborn } = require("./pages/mainPageNewborn");
 test.describe.configure({ mode: "serial" });
 
 test.describe("Verofication steps for newborn website", () => {
+  const USER = {
+    email: "email@dmytro.com",
+    password: "abc123",
+    token: "",
+  };
+  test.beforeAll(async ({ request }) => {
+    const response = await request.post("/api/auth/login", {
+      data: {
+        email: USER.email,
+        password: USER.password,
+      },
+      headers: { "Content-Type": "application/json" },
+    });
+    expect(response.ok()).toBeTruthy();
+    const body = await response.json();
+    expect(body).toHaveProperty("token");
+    USER.token = body.token;
+    console.log("AUTH", USER.token);
+  });
+
   test.beforeEach(async ({ page }) => {
-    await page.goto("http://5.189.186.217/login");
-    await page.getByLabel("Email:").fill("email@dmytro.com");
-    await page.getByLabel("Пароль:").fill("abc123");
-    await page.locator("button[type='submit']").click();
+    page.addInitScript((value) => {
+      window.localStorage.setItem("auth-token", value);
+    }, USER.token);
+    await page.goto("/overview");
   });
 
   test.skip("Check the state after open the page", async ({ page }) => {
