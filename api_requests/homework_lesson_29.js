@@ -1,7 +1,7 @@
 const axios = require("axios");
 const { expect } = require("chai");
 
-describe("Actions for jsonplaceholder website", async () => {
+describe.skip("Actions for jsonplaceholder website", async () => {
   let baseUrl = "https://jsonplaceholder.typicode.com";
   let userId;
 

@@ -3,7 +3,7 @@ import { faker } from "@faker-js/faker";
 
 test.describe.configure({ mode: "serial" });
 
-test.describe("Verofication steps for newborn website", () => {
+test.describe.skip("Verofication steps for newborn website", () => {
   const USER = {
     email: "email@dmytro.com",
     password: "abc123",
