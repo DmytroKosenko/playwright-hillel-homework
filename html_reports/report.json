@@ -1,0 +1,161 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 2,
+    "pending": 2,
+    "failures": 0,
+    "start": "2023-12-07T18:55:32.846Z",
+    "end": "2023-12-07T18:55:33.942Z",
+    "duration": 1096,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5954db6b-de6a-4712-99d8-f9c31f0ed5f2",
+      "title": "",
+      "fullFile": "C:\\Users\\Dmytro Kosenko\\OneDrive\\Рабочий стол\\QA Automation JS Course\\0. Course\\homework_2\\api_requests\\usage_axios.js",
+      "file": "\\api_requests\\usage_axios.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0d1451f9-5224-4afc-9fe3-7093a87ffec4",
+          "title": "Actions for users on dummy website",
+          "fullFile": "C:\\Users\\Dmytro Kosenko\\OneDrive\\Рабочий стол\\QA Automation JS Course\\0. Course\\homework_2\\api_requests\\usage_axios.js",
+          "file": "\\api_requests\\usage_axios.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create user",
+              "fullTitle": "Actions for users on dummy website Create user",
+              "timedOut": false,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "1fb20eab-d3f4-421f-a853-4d1dae4c88d2",
+              "parentUUID": "0d1451f9-5224-4afc-9fe3-7093a87ffec4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create product",
+              "fullTitle": "Actions for users on dummy website Create product",
+              "timedOut": false,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "7b3684d7-361b-4e77-98c1-b1d4db79debc",
+              "parentUUID": "0d1451f9-5224-4afc-9fe3-7093a87ffec4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get users by search params",
+              "fullTitle": "Actions for users on dummy website Get users by search params",
+              "timedOut": false,
+              "duration": 566,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const params = new URLSearchParams([\n  [\"key\", \"hair.color\"],\n  [\"value\", \"Brown\"],\n]);\nconst getUsersByParams = await axios.get(`${data.baseUrl}/users/filter`, {\n  params,\n});\n//console.log(getUsersByParams.data);\nexpect(getUsersByParams.status).equal(200);\nuserFirstName = getUsersByParams.data.users[2].firstName;\nuserLastName = getUsersByParams.data.users[2].lastName;\nuserId = getUsersByParams.data.users[2].id;\nconsole.log(userFirstName);\n//Arely",
+              "err": {},
+              "uuid": "6363efea-00e3-4672-9488-403a7472adf9",
+              "parentUUID": "0d1451f9-5224-4afc-9fe3-7093a87ffec4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get users by id and compare values",
+              "fullTitle": "Actions for users on dummy website Get users by id and compare values",
+              "timedOut": false,
+              "duration": 525,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const getUser = await axios.get(`${data.baseUrl}/users/${userId}`);\n//console.log(getUser.data);\nexpect(getUser.status).equal(200);\nexpect(userFirstName).equal(getUser.data.firstName);\nexpect(userLastName).equal(getUser.data.lastName);",
+              "err": {},
+              "uuid": "0afb57bc-4ba0-4e44-9bd0-afc9774bbbf4",
+              "parentUUID": "0d1451f9-5224-4afc-9fe3-7093a87ffec4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6363efea-00e3-4672-9488-403a7472adf9",
+            "0afb57bc-4ba0-4e44-9bd0-afc9774bbbf4"
+          ],
+          "failures": [],
+          "pending": [
+            "1fb20eab-d3f4-421f-a853-4d1dae4c88d2",
+            "7b3684d7-361b-4e77-98c1-b1d4db79debc"
+          ],
+          "skipped": [],
+          "duration": 1091,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 30000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report.html",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "html_reports",
+        "reportFilename": "report.html"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
