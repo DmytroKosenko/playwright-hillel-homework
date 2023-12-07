@@ -1,0 +1,32 @@
+name: e2e tests on Playwright
+
+on:
+  push:
+    branches: [main, master]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browser
+        run: npx playwright install chromium --with-deps
+
+      - name: Run Playwright tests
+        run: npx playwright test --project chromium --update-snapshots
+
+      - name: Archining the html report
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 5
+        env:
+          CI: "true"
