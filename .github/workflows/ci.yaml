@@ -1,8 +1,9 @@
 name: CI API test
 
 on:
-  push:
-    branches: [main, master]
+  pull_request:
+    branches:
+      - dkosenko/home_work_lesson_30
 
 jobs:
   tests:
@@ -17,3 +18,7 @@ jobs:
 
       - name: Run Api tests
         run: npm run api_tests
+      - name: Debug Information
+        run: |
+          echo "Current branch: $GITHUB_REF"
+          echo "Event name: $GITHUB_EVENT_NAME"
