@@ -1,7 +1,7 @@
 name: CI API test
 
 on:
-  pull_request_review:
+  pull_request:
     branches:
       - dkosenko/home_work_lesson_30
 
