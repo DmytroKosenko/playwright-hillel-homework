@@ -1,8 +1,8 @@
 name: CI API test
 
 on:
-  push:
-    branches: [main, master]
+  pull_request:
+    branches: [dkosenko/home_work_lesson_30]
 
 jobs:
   tests:
