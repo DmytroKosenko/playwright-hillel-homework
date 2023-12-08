@@ -18,3 +18,7 @@ jobs:
 
       - name: Run Api tests
         run: npm run api_tests
+      - name: Debug Information
+        run: |
+          echo "Current branch: $GITHUB_REF"
+          echo "Event name: $GITHUB_EVENT_NAME"
