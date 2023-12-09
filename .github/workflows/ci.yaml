@@ -1,9 +1,6 @@
 name: CI API test
 
-on:
-  pull_request:
-    branches:
-      - dkosenko/home_work_lesson_30
+on: [pull_request]
 
 jobs:
   tests:
